@@ -1,3 +1,6 @@
+# Number of times attempted: 1
+# Is Optimal: True
+
 class Solution:
 
   def isPalindrome(self, x: int) -> bool:

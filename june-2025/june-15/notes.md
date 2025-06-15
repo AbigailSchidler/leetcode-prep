@@ -1,5 +1,5 @@
 # Problems Completed
-Easy: 3
+Easy: 4
 Medium: 0
 Hard: 0
 
@@ -115,3 +115,44 @@ to the front of the list. Both were easy to figure out by looking up documentati
 ### Extra Notes
 
 This is an optimal solution!
+
+## Problem 4: Add Binary (Easy)
+
+### Approach
+
+This problem was very similar to the previous one, where instead of base 10 digits, I was dealing with binary, and
+I was adding two binary strings instead of adding one to a value.
+
+To make the implementation somewhat similar to problem 3, I converted the strings into lists where each element is
+a digit. Then, I made sure that both lists were the same length, so that each of the digits lined up properly for
+adding. When I added them together into another list `total`, that is where I utilized methods from problem three to
+fix any trouble digit elements so that it represents an authentic binary sequence. Finally, I converted the result back into
+a binary string.
+
+### Initialization
+
+I initalized the method by converting strings `a` and `b` into lists, where each element represents a binary digit (0 or 1).
+
+Next, I formatted the lists so that they are of equal length so that the addition matches up the digits properly. If
+`a` was longer, then I added 0s to the start of `b_list` until the lengths matched. If `b` was longer, I added 0s to the start of `a_list` until the lengths matched.
+
+Finally, I added the two lists together by converting each digit from `a_list` and `b_list` into integers and adding them
+into `total`.
+
+### Algorithm
+
+The while loop in this problem follows the same logic as problem 3, where it continues to find any instances of 2 being in a
+digits element, and fixing it so that it only shows a 0 or 1.
+
+At the end, I convert the list back into a list of characters, and join the list together into a binary string to return.
+
+### Challenges
+
+The most challenge I had with this problem was converting strings to lists and back into strings later. I also had issues
+with going from `total` back to a returnable string. I had to create `total_chars` as a crossing point so that the
+`join` function on an empty string will work.
+
+### Extra Notes
+
+Most optimal solution utilizes a built in function of python `bin`, as well as `int` casting that also utilizes a parameter
+`base`, which can be set to base 2 for binary. `bin()` always starts with `0b`, which needs to be sliced out of the string returned by `bin`.
