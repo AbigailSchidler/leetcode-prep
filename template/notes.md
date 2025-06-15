@@ -3,7 +3,7 @@ Easy: 0
 Medium: 0
 Hard: 0
 
-## Problem 1: _______
+## Problem #: _______
 
 ### Approach
 
@@ -12,3 +12,5 @@ Hard: 0
 ### Algorithm
 
 ### Challenges
+
+### Extra Notes

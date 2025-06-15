@@ -1,5 +1,5 @@
 # Problems Completed
-Easy: 2
+Easy: 3
 Medium: 0
 Hard: 0
 
@@ -81,3 +81,37 @@ It was an easy fix by checking the value of `first` to see if it maps to a valid
 
 It is more efficient to not have `first` and `second` index savers. I can instead use a `nums` array to store specific values
 and sum the entire array at the end using `return sum(nums)`.
+
+## Problem 3: Plus One (Easy)
+
+### Approach
+
+My approach in adding one to the integer was very simple by adding one to the last element in `digits` through `digits[len(digits) - 1] += 1`. After this, I realized that there are cases when the last digit is 9, and adding 1 to it makes it 10, which does not follow the correct formatting of the list `digits`. I knew that I had to find a way to move over that digit by one, which brought up another issue where the original number was 99, or 999, or anything with a long list of 9s. I quickly figured out I can just locate where the current issue digit element is and update accordingly.
+
+When the issue digit was at the front of the list, I had to add another element to `digits` at the front of the list to
+accomodate for the new 1 to add to `digits`.
+
+### Initialization
+
+There was little initialization in this problem. The first step was just to add one to the last element in the list.
+
+### Algorithm
+
+If the last digit in `digits` was 9, we entere into a while loop that continues to find any 10s in `digits` and reformats it to the correct format of only one digit per element in `digits`.
+
+While there still existed a 10 in the list, I located the problem element and set `digits[index]` to 0. Then, I split into
+cases based on the placement of the problem element.
+
+If the problem element was at the front (index 0), then I appended another element to the front of `digits`
+and assigned its value to 1. Otherwise, I add 1 to the element located at `index - 1`.
+
+Finally, I return `digits`.
+
+### Challenges
+
+The main challenge was trying to remember how to find the location of a digit element to fix, as well as append
+to the front of the list. Both were easy to figure out by looking up documentation about a list in python.
+
+### Extra Notes
+
+This is an optimal solution!
