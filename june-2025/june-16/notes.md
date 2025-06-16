@@ -8,6 +8,8 @@ Problem 1: Roman to Integer (Easy) - Attempted Last on June 15
 
 Problem 2: Plus One (Easy) - Attempted Last on June 15
 
+Problem 3: Add Binary (Easy) - Attempted Last on June 15
+
 ## Problem 1: Roman to Integer (Easy) - Revisited
 
 ### Notes
@@ -43,3 +45,18 @@ two digits in one element (10). If not, then I can add one to the current digit 
 since the process of adding one was successful. Otherwise, I changed the value of the digit from 9 to 0,
 and iterated to the next element, which could potentially add that carried over 1 to its element or carry
 it again.
+
+## Problem 3: Add Binary (Easy) - Revisited
+
+I tried a similar approach to the new plus one solution, but also learned to use a carry variable, since
+this is more difficult than just adding 1 to a number. By reversing the iteration direction for `a` and `b`,
+it saved more space overall. It was easier to add the numbers together by adding the current binary digit
+value to `carry`, and processing the result of `carry` after.
+
+I saved each of the binary digits in a list that can be joined into a string later. These values were input in
+reverse order because I looped from the end of the strings to the beginning. For each digit, I added the value
+based on the value of `carry % 2`, since it holds any values added from `a` and `b`. Then, I used integer division
+by 2 on `carry` to show that the value caused from the addition was either added to the current digit or
+carried over to the next digit.
+
+At the end, since `res` was reversed, I used a join on an empty string with the reversed `res`.

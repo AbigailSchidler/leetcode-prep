@@ -1,3 +1,5 @@
+# Interviewer Ready IF String conversion is allowed
+# ELSE view problem_1.py
 # Number of times attempted: 1
 # Is Optimal: True
 
