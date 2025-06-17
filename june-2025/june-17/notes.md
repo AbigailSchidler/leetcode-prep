@@ -3,7 +3,7 @@ Easy: 1
 Medium: 0
 Hard: 0
 
-## Problem 1: Merge Sorted Array (Easy)
+## Problem 88: Merge Sorted Array (Easy)
 
 ### Approach
 

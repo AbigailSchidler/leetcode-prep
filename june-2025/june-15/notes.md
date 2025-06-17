@@ -82,7 +82,7 @@ It was an easy fix by checking the value of `first` to see if it maps to a valid
 It is more efficient to not have `first` and `second` index savers. I can instead use a `nums` array to store specific values
 and sum the entire array at the end using `return sum(nums)`.
 
-## Problem 3: Plus One (Easy)
+## Problem 66: Plus One (Easy)
 
 ### Approach
 
@@ -116,7 +116,7 @@ to the front of the list. Both were easy to figure out by looking up documentati
 
 This is an optimal solution!
 
-## Problem 4: Add Binary (Easy)
+## Problem 67: Add Binary (Easy)
 
 ### Approach
 

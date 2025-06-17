@@ -6,9 +6,9 @@ Hard: 0
 # Problems Revisited
 Problem 1: Roman to Integer (Easy) - Attempted Last on June 15
 
-Problem 2: Plus One (Easy) - Attempted Last on June 15
+Problem 66: Plus One (Easy) - Attempted Last on June 15
 
-Problem 3: Add Binary (Easy) - Attempted Last on June 15
+Problem 67: Add Binary (Easy) - Attempted Last on June 15
 
 ## Problem 1: Roman to Integer (Easy) - Revisited
 
@@ -27,7 +27,7 @@ at `i` has a higher value than `i+1`, in which case we add `i` to `res`.
 
 This is a much simpler approach to my original solution and the solution I found after.
 
-## Problem 2: Plus One (Easy) - Revisited
+## Problem 66: Plus One (Easy) - Revisited
 
 ### Notes
 
@@ -46,7 +46,7 @@ since the process of adding one was successful. Otherwise, I changed the value o
 and iterated to the next element, which could potentially add that carried over 1 to its element or carry
 it again.
 
-## Problem 3: Add Binary (Easy) - Revisited
+## Problem 67: Add Binary (Easy) - Revisited
 
 I tried a similar approach to the new plus one solution, but also learned to use a carry variable, since
 this is more difficult than just adding 1 to a number. By reversing the iteration direction for `a` and `b`,
