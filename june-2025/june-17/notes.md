@@ -63,4 +63,9 @@ My solution was to add another variable `resIdx` that keeps track of the actual 
 
 ### Extra Notes
 
-Another solution I found first had an if statement of `if `
+Another solution I found first had an if statement of `if not nums1 and nums2` then `return None`. I'm not sure
+if that is required, since my solution does not include this statement.
+
+Otherwise, this other solution uses the process of iterating through the `nums2` backwards, which makes it simpler
+having to only loop through the values in `nums2`. I noticed that they also had three variables declared, but instead
+of starting at 0, they started at the end of the range for each of the variables.
