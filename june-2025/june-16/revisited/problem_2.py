@@ -1,4 +1,4 @@
-# Interviewer Ready
+# Interviewer Ready Solution
 # Num of times attempted: 1
 # Optimal: True
 
