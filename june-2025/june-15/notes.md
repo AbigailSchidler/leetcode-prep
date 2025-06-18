@@ -123,9 +123,9 @@ This is an optimal solution!
 This problem was very similar to the previous one, where instead of base 10 digits, I was dealing with binary, and
 I was adding two binary strings instead of adding one to a value.
 
-To make the implementation somewhat similar to problem 3, I converted the strings into lists where each element is
+To make the implementation somewhat similar to problem 66, I converted the strings into lists where each element is
 a digit. Then, I made sure that both lists were the same length, so that each of the digits lined up properly for
-adding. When I added them together into another list `total`, that is where I utilized methods from problem three to
+adding. When I added them together into another list `total`, that is where I utilized methods from problem 66 to
 fix any trouble digit elements so that it represents an authentic binary sequence. Finally, I converted the result back into
 a binary string.
 

@@ -1,5 +1,5 @@
 # Problems Completed
-Easy: 2
+Easy: 3
 Medium: 0
 Hard: 0
 
@@ -106,3 +106,39 @@ Looking over solutions, I realized that using `pop(i)` is very costly, which can
 a two-pointer approach instead, where I leverage `k` to start at 0 and basically give the index position of the element that
 is not equal to `val`. I'm not actually deleting from the list! Instead I overwrite the first `k` elements of `nums` to hold
 all values that do not equal `val`.
+
+## Problem 26: Remove Duplicates From Sorted Array (Easy)
+
+### Approach
+
+I realized that this problem was very similar to problem 27 in terms of using a two pointer approach to keep track of
+the next element to process `i` in terms of whether it's a duplicate or not, and the next spot to place a unique element
+with `k`. The only difference was that I couldn't rely on `k` to store the final count of unique elements in the end,
+and I needed a base case that handled empty lists. Since `k` was only off by one, I added 1 to the return statement to get
+the final result.
+
+### Initialization
+
+First, I checked if `nums` was empty. If so, I just returned 0. Otherwise, I initialized a variable `k` with a much
+similar purpose as in problem 27.
+
+### Algorithm
+
+The overall loop and body of the for loop were structurally similar to problem 27 with some tweaks. If `nums[i] != num[k]`,
+then I moved the index of `k` over one to accommodate for the next unique element spot. Then, I placed the value of
+`nums[i]` in `nums[k]`.
+
+After exiting the loop, I returned `k + 1` because `k` only stored the last index of the unique elements, not the actual size,
+which is easily fixed by adding one.
+
+### Challenges
+
+I briefly struggled with thinking about how to use the knowledge from problem 27 to modify into a working solution for
+problem 26. I am still unsure if there was a simpler way to modify my solution for problem 27.
+
+### Extra Notes
+
+Read the constraints! One of the constraints is that `nums` is guaranteed to have at least one element, so I did
+not need the base case! This makes it way easier to match with problem 27 in that I can start at `k = 1` instead
+of `k = 0`. That way I can continue to use it as a pointer for the next open spot for a unique value, and the actual
+count of unique elements.
