@@ -1,6 +1,6 @@
 # Problems Completed
 Easy: 3
-Medium: 0
+Medium: 1
 Hard: 0
 
 ## Problem 88: Merge Sorted Array (Easy)
@@ -142,3 +142,40 @@ Read the constraints! One of the constraints is that `nums` is guaranteed to hav
 not need the base case! This makes it way easier to match with problem 27 in that I can start at `k = 1` instead
 of `k = 0`. That way I can continue to use it as a pointer for the next open spot for a unique value, and the actual
 count of unique elements.
+
+## Problem 80: Remove Duplicates from Sorted Array II (Medium)
+
+### Approach
+
+This problem was very similar to problem 26. At this point I had not attempted the optimized solution I found for problem
+26, but I chose to try using that logic to implement this problem anyway. The only difference for this problem was that if
+a duplicate was found, it is allowed to be added to the final array if it's only the second occurrence. Therefore, I kept
+track of a new variable `occur` that remembered if an element was already added. The other case followed the same logic
+as problem 26 in terms of if the element was unique.
+
+### Initialization
+
+I initialized two variables. The first was `k`, which was set to 1 because the constraints specify that `nums` has at least
+one element.
+
+The second variable was `occur`, which I initialized to 1 also because there was one occurrence of the first value in `nums`
+that was processed. This value would either be 0 or 1 (may change to be True or False) based on whether a duplicate was found
+or another unique value.
+
+### Algorithm
+
+The for loop went from the range [1, len(s)) because the first element of the array was already processed as valid.
+
+The first condition in the body of the for loop checks for a case when the compared elements are the same, and there's only
+been one occurrence of that element so far. The second condition is identical to problem 26 in seeing if `nums[i] > nums[k-1]`.
+Both of these conditions check for a valid element to add, so the bodies of these conditionals are almost identical, with the exception of setting `occur` to 0 for the first condition, and 1 for the second. I believe there is a less redundant way to approach this.
+
+`k` is returned at the end since it represents the number of elements that should remain in the list.
+
+### Challenges
+
+My main challenge was trying to reduce redundancy in my code, which I will have to check with a sample solution to get advice.
+
+### Extra Notes
+
+One of the sample solutions is SO similar to problem 26 with one tweak. Instead of using `k=1` and `nums[k-1]`, it goes in pairs of twos! This means it uses `k=2` and `nums[k-2]`. So simple!!! There is no need for the `occur` variable with this approach.

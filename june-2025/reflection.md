@@ -1,7 +1,7 @@
 # Problems Completed
 
-Easy: 6
-Medium: 0
+Easy: 7
+Medium: 1
 Hard: 0
 
 # Topics Covered

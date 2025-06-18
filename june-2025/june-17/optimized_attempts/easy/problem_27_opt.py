@@ -1,6 +1,6 @@
 # Interviewer Ready
 # Number of times attempted: 2
-# Is Optimal: False
+# Is Optimal: True
 
 from typing import List
 
