@@ -4,13 +4,13 @@ Medium: 0
 Hard: 0
 
 # Problems Revisited
-Problem 1: Roman to Integer (Easy) - Attempted Last on June 15
+Problem 13: Roman to Integer (Easy) - Attempted Last on June 15
 
 Problem 66: Plus One (Easy) - Attempted Last on June 15
 
 Problem 67: Add Binary (Easy) - Attempted Last on June 15
 
-## Problem 1: Roman to Integer (Easy) - Revisited
+## Problem 13: Roman to Integer (Easy) - Revisited
 
 ### Notes
 

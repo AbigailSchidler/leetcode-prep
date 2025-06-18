@@ -3,7 +3,7 @@ Easy: 4
 Medium: 0
 Hard: 0
 
-## Problem 1: Palindrome Number (Easy)
+## Problem 9: Palindrome Number (Easy)
 
 ### Approach
 
@@ -42,7 +42,7 @@ a reversed string.
 If I were to convert it to a string, I could compare it really easily through s == s[::-1], since that
 slice automatically reverses the string. This is the fastest solution, but involves casting to a str.
 
-## Problem 2: Roman to Integer (Easy)
+## Problem 13: Roman to Integer (Easy)
 
 ### Approach
 

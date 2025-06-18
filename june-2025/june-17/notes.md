@@ -1,5 +1,5 @@
 # Problems Completed
-Easy: 1
+Easy: 2
 Medium: 0
 Hard: 0
 
@@ -69,3 +69,40 @@ if that is required, since my solution does not include this statement.
 Otherwise, this other solution uses the process of iterating through the `nums2` backwards, which makes it simpler
 having to only loop through the values in `nums2`. I noticed that they also had three variables declared, but instead
 of starting at 0, they started at the end of the range for each of the variables.
+
+## Problem 27: Remove Element (Easy)
+
+### Approach
+
+This problem was very simple. I chose to save the number of elements not equal to `val` in a variable `k` that is
+set to the length of `nums`, and subtracting whenever I find an occurence of `val`, but I could have also set `k`
+to 0 and incremented whenever I don't find an instance. I figured the first approach was better, however.
+
+When `val` was found in the `nums`, I used `pop(i)` to remove the element at index `i` from `nums`. To ensure that this
+worked after an element was removed, I iterated through `nums` backwards. This also ensured that all elements not equal
+to `val` would be found at the front of `nums`.
+
+### Initialization
+
+I only initialized one variable `k` set to the length of `nums`. I chose this approach because assuming I kept the same if branch in my code `if nums[i] == val`, I would need an `else` branch to increment `k` if `k` was initialized to 0. Setting `k`
+to `len(nums)` seemed like a cleaner approach with less branches.
+
+### Algorithm
+
+Because I was tasked to remove elements from `nums`, I chose to iterate through `nums` backwards so as to not disrupt the
+indexing in the for-loop. Within the loop, if I found `val` at the index `i`, I used `pop(i)` to remove the element from the
+list. If I were to iterate starting at index 0, this would have disrupted the loop and could have led to skipping values
+that should be removed. I also decremented the value of `k` whenever `val` was found in `nums`. At the end, I returned `k`.
+
+### Challenges
+
+The biggest challenge was understanding what constitutes something as being `in-place`. I was unsure if using `pop(i)` was
+a cheat code to removing the elements. Am I supposed to leave the size of `nums` unchanged, and still remove the elements
+somehow? I have to check other solutions. If not, I believe this solution I came up with is optimal.
+
+### Extra Notes
+
+Looking over solutions, I realized that using `pop(i)` is very costly, which can give me a runtime of `O(n^2)`. I need to use
+a two-pointer approach instead, where I leverage `k` to start at 0 and basically give the index position of the element that
+is not equal to `val`. I'm not actually deleting from the list! Instead I overwrite the first `k` elements of `nums` to hold
+all values that do not equal `val`.
