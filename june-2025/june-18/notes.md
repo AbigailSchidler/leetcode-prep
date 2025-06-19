@@ -39,3 +39,45 @@ It is actually really easy to make a set out of the elements in `nums`. I can ju
 compare the size of that and `nums` like I had thought. My original approach was a hash set approach, however.
 This optimized approach would be considered hash set length. The hash set length approach is more consise
 but not as algorithmic.
+
+## Problem 2: Valid Anagram
+
+### Approach
+
+I figured that I could create list versions of the two strings to compare. I knew I couldn't use sets because
+sets do not allow for duplicates, which could occur in words. Once I did this, I iterated through
+`list_s` and checked if `list_t` contained each character in `list_s`. If it contained the character, that
+character was removed from `list_t`. Otherwise, I returned `False` because it violates the definition of an
+anagram.
+
+After fully checking each character, I checked if the length of `list_t` was 0. If it was, then that means that
+every character from `list_t` matched with every character from `list_s`, making it an anagram and returning `True`.
+Otherwise, there are characters remaining in `list_t` that were not in `list_s`, violating the definition of an
+anagram and returning `False`.
+
+### Initialization
+
+I initialized two lists `list_s` and `list_t` from strings `s` and `t` respectively. Each element in these
+lists contained a character from the original strings.
+
+### Algorithm
+
+I looped through `list_s` and checked if `list_t` contained that character. If it did, then I removed that character
+from `list_t`. Otherwise, I returned `False`.
+
+After exiting the loop, I returned a boolean expression `return len(list_t) == 0`. This checks if there are characters
+in `list_t` that were not found in `list_s`. The result of the expression matches whether the strings were anagrams of each
+other or not.
+
+### Challenges
+
+At first I thought I could just return `list_s == list_t`. However, I learned that lists only equal if each element matches
+the same order. This made me modify my approach to actually loop through one of the lists and check each element.
+
+### Extra Notes
+
+I can use a `count` function to check how many times each character appears in both strings. I just have to create a set
+to hold all of the characters that occur in one string and compare it to the other string.
+
+I can also just check for the size difference first to prevent the loop from being entered if the sizes are different,
+which violates the definition of an anagram.
