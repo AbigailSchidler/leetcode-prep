@@ -5,8 +5,6 @@ Hard: 0
 
 ## Problem 4: Group Anagrams
 
-### Approach
-
 ### Initialization
 
 I initialized a default dictionary `res` that allows for its values to be a list that can be appended to.
@@ -38,3 +36,6 @@ to the real solution, but lacked some of the intuition for how to create the lis
 Had to find solution after failed attempt to form my own solution. I ended up learning about
 `defaultdict`, which is a type of dictionary that does not throw an error when appending to a key
 that does not exist yet.
+
+There is another method that involves sorting the characters in the strings and then using a similar process.
+I can also implement this without using a `defaultdict` by first checking if the key exists.
