@@ -1,5 +1,5 @@
 # Problems Completed
-Easy: 1
+Easy: 3
 Medium: 0
 Hard: 0
 

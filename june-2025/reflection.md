@@ -1,6 +1,6 @@
 # Problems Completed
 
-Easy: 8
+Easy: 10
 Medium: 1
 Hard: 0
 
