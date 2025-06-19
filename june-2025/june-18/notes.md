@@ -81,3 +81,6 @@ to hold all of the characters that occur in one string and compare it to the oth
 
 I can also just check for the size difference first to prevent the loop from being entered if the sizes are different,
 which violates the definition of an anagram.
+
+I learned that `count` is actually a costly function! It is better to use a fixed array of size 26 to keep track of the count
+of the characters. (See isAnagramBetter in optimized solutions)
