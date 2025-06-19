@@ -36,4 +36,6 @@ Two Sum (June 18, 2025)
 
 ### Medium
 
+Group Anagrams (June 19, 2025)
+
 ### Hard
