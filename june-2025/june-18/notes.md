@@ -84,3 +84,24 @@ which violates the definition of an anagram.
 
 I learned that `count` is actually a costly function! It is better to use a fixed array of size 26 to keep track of the count
 of the characters. (See isAnagramBetter in optimized solutions)
+
+## Problem 3: Two Sum
+
+### Approach
+
+I used a brute force approach of just using an inner and outer for loop to check if the values at indices `i` and `j`
+matched `target`. I figured this was not an optimal approach, but it was conceptually very easy to come up with this
+solution.
+
+### Extra Notes
+
+I learned that mapping is a great way to make the code more efficient. I can map each of the values to an index by
+creating a map titled `indices` and storing each value with an index. Then, I can loop through each of these key/value
+pairs and find an instance of another key/value pair that matches the difference between the first value and target. If one
+exists, then I found my two indices, and I return their keys.
+
+With python, I can do this by using `enumerate` to gather the index and the value. `enumerate` returns like `i, n`, where
+`i` is the index, and `n` is the value at that index.
+
+I did not even need to use `enumerate` after all! I can just use a dictionary and assign keys as the value from
+`nums` and the value as the index!
