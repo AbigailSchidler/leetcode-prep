@@ -1,4 +1,4 @@
-# Interviewer Ready
+# Interviewer Ready IF sorting is not allowed AND defaultdict is usable
 
 from collections import defaultdict
 from typing import List

@@ -39,3 +39,27 @@ that does not exist yet.
 
 There is another method that involves sorting the characters in the strings and then using a similar process.
 I can also implement this without using a `defaultdict` by first checking if the key exists.
+
+## Problem 5: Top K Frequent Elements
+
+### Initialization
+
+I initialized a dictionary `counts`, where the key is the unique number found in `nums`, and the value is
+the frequency of that number.
+
+I also initialized a list `res` to store the resulting `k` most frequent elements.
+
+### Algorithm
+
+First, I iterated through `nums` to process the counts of each number found. This time, I used a regular
+dictionary instead of a default dictionary.
+
+Next, I sorted the dictionary `counts` based on the value (the count), and then iterated through the sorted
+dictionary until the `k` elements were added to `res`, or all unique numbers were added to `res` if there are less
+numbers than `k`.
+
+### Challenges
+
+I wasn't sure how to sort the keys using the values, so I had to search it up.
+
+### Extra Notes
