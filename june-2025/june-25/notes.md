@@ -1,6 +1,6 @@
 # Problems Completed
 Easy: 0
-Medium: 1
+Medium: 2
 Hard: 0
 
 # Problems Revisited
@@ -40,3 +40,16 @@ of string slices and start and end indices `i` and `j` to parse different parts 
 
 `decode` was really difficult to figure out how to write optimally. I learned that I can utilize slices and indices
 to navigate the decoding process more efficiently.
+
+## Problem 7: Product of Array Except Self (Medium)
+
+### Approach
+
+It was really easy coming up with a solution, but it was more difficult coming up with an efficient one that does
+not have O(n^2) time complexity. Looking at some optimal solutions, I learned that I can iterate through the array
+twice, forwards and backwards, and use values called `prefix` and `postfix` to multiply to after an element has been
+processed.
+
+### Challenges
+
+The main challenge was coming up with a more optimal solution than using a double for loop.
